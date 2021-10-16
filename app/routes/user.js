@@ -1,16 +1,20 @@
 const express = require("express");
 
 const controller = require("../controllers/user");
-
 const router = express.Router(); //defines la ruta
 
 const path = "user";
 
 /**
- Ruta : /user
+ Ruta : /user Metodo Get
  */
 
 router.get(`/${path}`, controller.getData);
 
-module.exports = router;
+/**
+ Ruta : /user Metodo Post
+ */
 
+router.post(`/`, controller.inserData);
+
+module.exports = router;

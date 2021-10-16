@@ -2,8 +2,6 @@ const express = require("express");
 
 const initDB = require("./config/db"); //inicializacion de la base de datos
 
-const bodyParser = require("body-parser"); //bodyParser ayuda a parsear cualquier tipo de dato
-
 const app = express();
 const port = 3001;
 const userRouters = require("./app/routes/user");
@@ -21,6 +19,7 @@ app.use(
 app.use(
   express.urlencoded({
     limit: "20mb",
+    extended: true,
   })
 );
 
