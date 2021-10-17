@@ -7,6 +7,7 @@ const port = 3001;
 const userRouters = require("./app/routes/user");
 const itemsRouter = require("./app/routes/items");
 const friendsRouter = require("./app/routes/friends");
+const uploadFile = require("./app/routes/upload");
 
 //parsear datos en json
 app.use(
@@ -26,6 +27,7 @@ app.use(
 app.use(userRouters);
 app.use(itemsRouter);
 app.use(friendsRouter);
+app.use(uploadFile);
 
 app.listen(port, () => {
   //para ejecutar en el puerto que has creado
